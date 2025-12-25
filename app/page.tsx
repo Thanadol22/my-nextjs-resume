@@ -149,7 +149,7 @@ export default function Home() {
             <h2 className="text-xl md:text-2xl font-bold flex items-center gap-3 text-slate-900 mb-6 uppercase tracking-tight">
               <User className="text-blue-600" /> About Me
             </h2>
-            <div className="text-base md:text-lg leading-relaxed text-slate-600 text-justify">
+            <div className="text-base md:text-lg leading-relaxed text-slate-600 text-justify tracking-tighter md:tracking-normal">
               <p>I am a passionate developer with a deep interest in building modern websites and applications. I thrive on the challenges of software development and am constantly exploring new technologies to enhance my technical skills.</p>
             </div>
           </section>
@@ -204,12 +204,12 @@ export default function Home() {
               <Globe className="text-blue-600" /> Projects
             </h2>
             <div className="space-y-6 md:space-y-8 text-justify">
-              
+
               <div className="group p-6 md:p-8 bg-white border border-slate-200 rounded-[1.5rem] md:rounded-[2rem] shadow-sm hover:border-blue-200 hover:shadow-lg transition-all">
                 <h3 className="text-lg md:text-xl font-bold text-blue-800 mb-3 flex flex-wrap items-center gap-2">
                   BangkokSpaAcademy <span className="text-[10px] font-normal text-slate-500 bg-slate-100 px-3 py-1 rounded-full italic uppercase tracking-wider">Web App</span>
                 </h3>
-                <p className="text-sm md:text-base text-slate-600 leading-relaxed italic">
+                <p className="text-sm md:text-base text-slate-600 leading-relaxed  tracking-tighter md:tracking-normal">
                   Developed a comprehensive platform for a spa academy. Features an online course catalog and a professional storefront with a clean, calming aesthetic to enhance user experience.
                 </p>
               </div>
@@ -217,7 +217,7 @@ export default function Home() {
                 <h3 className="text-lg md:text-xl font-bold text-blue-800 mb-3 flex flex-wrap items-center gap-2">
                   Ec Students Projects <span className="text-[10px] font-normal text-slate-500 bg-slate-100 px-3 py-1 rounded-full italic uppercase tracking-wider">Mobile App</span>
                 </h3>
-                <p className="text-sm md:text-base text-slate-600 leading-relaxed italic">
+                <p className="text-sm md:text-base text-slate-600 leading-relaxed  tracking-tighter md:tracking-normal">
                   Developed a centralized application to digitize and manage the department&apos;s historical project archives. QR code scanning for seamless borrowing/returning and an automated faculty approval workflow.                </p>
               </div>
             </div>
