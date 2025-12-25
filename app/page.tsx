@@ -39,27 +39,27 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-800 relative">
-      
+
       {/* --- Lightbox Modal (แสดงเมื่อมีการคลิกที่รูปภาพ) --- */}
       {selectedImg && (
-        <div 
+        <div
           className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-sm p-4 animate-in fade-in duration-300"
           onClick={() => setSelectedImg(null)}
         >
           {/* ปุ่มปิด */}
-          <button 
+          <button
             className="absolute top-6 right-6 text-white hover:text-blue-400 transition-colors z-[110]"
             onClick={() => setSelectedImg(null)}
           >
             <X size={40} />
           </button>
-          
+
           {/* รูปภาพเต็มหน้าจอ */}
           <div className="relative w-full max-w-5xl h-[80vh] flex items-center justify-center">
-            <Image 
-              src={selectedImg} 
-              alt="Full view" 
-              fill 
+            <Image
+              src={selectedImg}
+              alt="Full view"
+              fill
               className="object-contain"
               priority
             />
@@ -130,6 +130,7 @@ export default function Home() {
                 { name: "TypeScript", level: "Junior" },
                 { name: "Python", level: "Junior" },
                 { name: "Java", level: "Junior" },
+                { name: "SQL", level: "Junior" },
                 { name: "UX/UI Design", level: "Junior" },
               ].map((skill) => (
                 <div key={skill.name} className="px-3 py-1.5 bg-slate-800 border border-slate-700 rounded-lg flex flex-col items-start transition-all hover:border-blue-500 hover:bg-slate-700 group">
@@ -143,7 +144,7 @@ export default function Home() {
 
         {/* --- Main Content --- */}
         <main className="flex-1 p-6 sm:p-10 md:p-16 max-w-5xl mx-auto w-full">
-          
+
           <section className="mb-12 md:mb-16">
             <h2 className="text-xl md:text-2xl font-bold flex items-center gap-3 text-slate-900 mb-6 uppercase tracking-tight">
               <User className="text-blue-600" /> About Me
@@ -160,6 +161,12 @@ export default function Home() {
             <div className="space-y-8 relative before:absolute before:inset-0 before:left-3 before:w-0.5 before:bg-slate-200">
               <div className="relative pl-10">
                 <div className="absolute left-0 top-1.5 w-6 h-6 bg-white border-4 border-blue-500 rounded-full shadow-md"></div>
+                <h3 className="text-lg md:text-xl font-bold text-slate-800">University (Present)</h3>
+                <p className="text-blue-600 font-medium">Rajamangala University of Technology Thanyaburi</p>
+                <p className="text-sm text-slate-500 mt-1">Major in Computer Engineering</p>
+              </div>
+              <div className="relative pl-10">
+                <div className="absolute left-0 top-1.5 w-6 h-6 bg-white border-4 border-slate-300 rounded-full shadow-md"></div>
                 <h3 className="text-lg md:text-xl font-bold text-slate-800">High Vocational Certificate (Associate Degree)</h3>
                 <p className="text-blue-600 font-medium">Samutsongkharm Technical College</p>
                 <p className="text-sm text-slate-500 mt-1">Major in Software Developers</p>
@@ -170,6 +177,7 @@ export default function Home() {
                 <p className="text-blue-600 font-medium">Samutsongkharm Technical College</p>
                 <p className="text-sm text-slate-500 mt-1">Major in Information Technology</p>
               </div>
+
             </div>
           </section>
 
@@ -196,21 +204,21 @@ export default function Home() {
               <Globe className="text-blue-600" /> Projects
             </h2>
             <div className="space-y-6 md:space-y-8 text-justify">
-              <div className="group p-6 md:p-8 bg-slate-900 text-white rounded-[1.5rem] md:rounded-[2rem] shadow-xl hover:ring-4 ring-blue-500/20 transition-all">
-                <h3 className="text-lg md:text-xl font-bold text-blue-400 mb-3 flex flex-wrap items-center gap-2">
-                  Ec Students Projects <span className="text-[10px] font-normal text-slate-400 bg-slate-800 px-3 py-1 rounded-full italic uppercase tracking-wider">Mobile App</span>
-                </h3>
-                <p className="text-sm md:text-base text-slate-300 leading-relaxed italic">
-                  Developed a centralized application to digitize and manage the department&apos;s historical project archives. QR code scanning for seamless borrowing/returning and an automated faculty approval workflow.
-                </p>
-              </div>
+              
               <div className="group p-6 md:p-8 bg-white border border-slate-200 rounded-[1.5rem] md:rounded-[2rem] shadow-sm hover:border-blue-200 hover:shadow-lg transition-all">
-                <h3 className="text-lg md:text-xl font-bold text-slate-800 mb-3 flex flex-wrap items-center gap-2">
+                <h3 className="text-lg md:text-xl font-bold text-blue-800 mb-3 flex flex-wrap items-center gap-2">
                   BangkokSpaAcademy <span className="text-[10px] font-normal text-slate-500 bg-slate-100 px-3 py-1 rounded-full italic uppercase tracking-wider">Web App</span>
                 </h3>
                 <p className="text-sm md:text-base text-slate-600 leading-relaxed italic">
                   Developed a comprehensive platform for a spa academy. Features an online course catalog and a professional storefront with a clean, calming aesthetic to enhance user experience.
                 </p>
+              </div>
+              <div className="group p-6 md:p-8 bg-white border border-slate-200 rounded-[1.5rem] md:rounded-[2rem] shadow-sm hover:border-blue-200 hover:shadow-lg transition-all">
+                <h3 className="text-lg md:text-xl font-bold text-blue-800 mb-3 flex flex-wrap items-center gap-2">
+                  Ec Students Projects <span className="text-[10px] font-normal text-slate-500 bg-slate-100 px-3 py-1 rounded-full italic uppercase tracking-wider">Mobile App</span>
+                </h3>
+                <p className="text-sm md:text-base text-slate-600 leading-relaxed italic">
+                  Developed a centralized application to digitize and manage the department&apos;s historical project archives. QR code scanning for seamless borrowing/returning and an automated faculty approval workflow.                </p>
               </div>
             </div>
           </section>
@@ -230,29 +238,29 @@ export default function Home() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                 {displayedProjects.map((item, index) => (
-                  <div 
-                    key={index} 
+                  <div
+                    key={index}
                     className="group relative animate-in fade-in zoom-in duration-500 cursor-zoom-in"
                     onClick={() => setSelectedImg(item.src)}
                   >
                     <div className="relative aspect-video md:aspect-square overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 transition-all duration-300 group-hover:shadow-xl group-hover:ring-4 group-hover:ring-blue-500/20 group-hover:-translate-y-1">
                       <Image src={item.src} alt={`Work ${index + 1}`} fill className="object-cover transition-transform duration-500 group-hover:scale-110" />
-                      
+
                       {/* Hover Overlay */}
                       <div className="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                         <div className="bg-white/20 backdrop-blur-md p-3 rounded-full border border-white/40 transform scale-75 group-hover:scale-100 transition-transform duration-300">
-                            <ZoomIn size={24} className="text-white" />
-                         </div>
+                        <div className="bg-white/20 backdrop-blur-md p-3 rounded-full border border-white/40 transform scale-75 group-hover:scale-100 transition-transform duration-300">
+                          <ZoomIn size={24} className="text-white" />
+                        </div>
                       </div>
-                      
-                     
+
+
                     </div>
                   </div>
                 ))}
               </div>
 
               <div className="mt-4 pt-6 border-t border-slate-100 flex justify-center">
-                <button 
+                <button
                   onClick={() => setShowAll(!showAll)}
                   className="px-8 py-3 bg-slate-900 text-white rounded-full font-bold text-sm hover:bg-blue-600 transition-all shadow-lg shadow-slate-200 active:scale-95 flex items-center gap-2 group"
                 >
