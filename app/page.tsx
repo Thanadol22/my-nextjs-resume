@@ -92,9 +92,9 @@ export default function Portfolio() {
       {/* About / Skills Section */}
       <section id="about" className="pt-24 md:pt-28 pb-20 px-6 md:px-12 lg:px-24 bg-white w-full flex flex-col gap-20">
         <div className="max-w-6xl mx-auto flex flex-col gap-20">
-          <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-20">
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-12 md:gap-20">
             {/* Left: Profile Image */}
-            <div className="relative w-full lg:w-1/2 flex justify-center">
+            <div className="relative w-full md:w-1/2 flex justify-center">
               {/* Background circles effect */}
               <div className="absolute inset-0 flex items-center justify-center -z-10 group">
                 <div className="w-56 h-56 sm:w-64 sm:h-64 md:w-80 md:h-80 bg-sky-50 rounded-full animate-pulse opacity-70"></div>
