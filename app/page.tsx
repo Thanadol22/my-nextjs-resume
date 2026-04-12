@@ -8,7 +8,7 @@ export default function Portfolio() {
   return (
     <div className="min-h-screen bg-white font-sans pb-20">
       {/* Navigation */}
-      <nav className="flex justify-between items-center px-8 md:px-24 py-6 bg-sky-50 w-full border-b border-gray-50 sticky top-0 z-50">
+      <nav className="flex justify-between items-center px-6 md:px-12 lg:px-24 py-6 bg-sky-50 w-full border-b border-gray-50 sticky top-0 z-50">
         <div className="font-bold text-xl text-sky-500 flex gap-2">
           <span className=" text-sky-500 px-2 py-1 rounded">THANA<span className="px-1 py-1 text-gray-800 tracking-widest">DOL</span></span>
 
@@ -25,24 +25,24 @@ export default function Portfolio() {
       </nav>
 
       {/* Hero Section */}
-      <section id="intro" className="relative bg-sky-50 text-center w-full pt-16 pb-0 md:pb-24 overflow-hidden md:overflow-visible">
+      <section id="intro" className="relative bg-sky-50 text-center w-full pt-16 pb-24 md:pb-24 overflow-hidden md:overflow-visible">
         <div className="max-w-6xl mx-auto relative">
 
 
 
           {/* Floating Tags Placeholders */}
-          <div className="absolute top-8 md:-top-4 left-16 md:left-[25%] w-16 h-16 rounded-full bg-white shadow-xl shadow-sky-100/50 flex items-center justify-center text-xs font-bold text-sky-500 z-0 animate-bounce" style={{ animationDuration: '3s' }}>HTML</div>
-          <div className="absolute top-32 md:top-36 left-4 md:left-[5%] w-16 h-16 rounded-full bg-white shadow-xl shadow-sky-100/50 flex items-center justify-center text-[10px] font-bold text-sky-500 text-center leading-tight z-0 animate-bounce" style={{ animationDuration: '4s' }}>Tailwind<br />CSS</div>
-          <div className="absolute top-[16rem] md:top-[18rem] left-24 md:left-[18%] w-12 h-12 rounded-full bg-white shadow-xl shadow-sky-100/50 flex items-center justify-center text-[10px] font-bold text-sky-500 z-0 animate-bounce" style={{ animationDuration: '3.5s' }}>CSS</div>
-          <div className="absolute top-[22rem] md:top-[28rem] left-8 md:left-[8%] w-14 h-14 rounded-full bg-white shadow-xl shadow-sky-100/50 flex items-center justify-center text-xs font-bold text-sky-500 z-0 animate-bounce" style={{ animationDuration: '4.5s' }}>JS</div>
+          <div className="hidden md:flex absolute top-8 md:-top-4 left-16 md:left-[25%] w-16 h-16 rounded-full bg-white shadow-xl shadow-sky-100/50 items-center justify-center text-xs font-bold text-sky-500 z-0 animate-bounce" style={{ animationDuration: '3s' }}>HTML</div>
+          <div className="hidden md:flex absolute top-32 md:top-36 left-4 md:left-[5%] w-16 h-16 rounded-full bg-white shadow-xl shadow-sky-100/50 items-center justify-center text-[10px] font-bold text-sky-500 text-center leading-tight z-0 animate-bounce" style={{ animationDuration: '4s' }}>Tailwind<br />CSS</div>
+          <div className="hidden md:flex absolute top-[16rem] md:top-[18rem] left-24 md:left-[18%] w-12 h-12 rounded-full bg-white shadow-xl shadow-sky-100/50 items-center justify-center text-[10px] font-bold text-sky-500 z-0 animate-bounce" style={{ animationDuration: '3.5s' }}>CSS</div>
+          <div className="hidden md:flex absolute top-[22rem] md:top-[28rem] left-8 md:left-[8%] w-14 h-14 rounded-full bg-white shadow-xl shadow-sky-100/50 items-center justify-center text-xs font-bold text-sky-500 z-0 animate-bounce" style={{ animationDuration: '4.5s' }}>JS</div>
 
-          <div className="absolute top-10 md:-top-2 right-16 md:right-[22%] w-14 h-14 rounded-full bg-white shadow-xl shadow-sky-100/50 flex items-center justify-center text-[10px] font-bold text-sky-500 z-0 animate-bounce" style={{ animationDuration: '3.2s' }}>Flutter</div>
-          <div className="absolute top-28 md:top-32 right-4 md:right-[6%] w-14 h-14 rounded-full bg-white shadow-xl shadow-sky-100/50 flex items-center justify-center text-[11px] font-bold text-sky-500 z-0 animate-bounce" style={{ animationDuration: '4.2s' }}>PHP</div>
-          <div className="absolute top-[14rem] md:top-[17rem] right-24 md:right-[18%] w-12 h-12 rounded-full bg-white shadow-xl shadow-sky-100/50 flex items-center justify-center text-[10px] font-bold text-sky-500 z-0 animate-bounce" style={{ animationDuration: '3.8s' }}>Python</div>
-          <div className="absolute top-[21rem] md:top-[26rem] right-40 md:right-[5%] w-14 h-14 rounded-full bg-white shadow-xl shadow-sky-100/50 flex items-center justify-center text-[10px] font-bold text-sky-500 z-0 animate-bounce" style={{ animationDuration: '4.1s' }}>MySQL</div>
-          <div className="absolute -top-6 md:-top-10 right-1/3 md:right-[40%] w-12 h-12 rounded-full bg-white shadow-xl shadow-sky-100/50 flex items-center justify-center text-[9px] font-bold text-sky-500 z-0 animate-bounce" style={{ animationDuration: '3.6s' }}>Firebase</div>
+          <div className="hidden md:flex absolute top-10 md:-top-2 right-16 md:right-[22%] w-14 h-14 rounded-full bg-white shadow-xl shadow-sky-100/50 items-center justify-center text-[10px] font-bold text-sky-500 z-0 animate-bounce" style={{ animationDuration: '3.2s' }}>Flutter</div>
+          <div className="hidden md:flex absolute top-28 md:top-32 right-4 md:right-[6%] w-14 h-14 rounded-full bg-white shadow-xl shadow-sky-100/50 items-center justify-center text-[11px] font-bold text-sky-500 z-0 animate-bounce" style={{ animationDuration: '4.2s' }}>PHP</div>
+          <div className="hidden md:flex absolute top-[14rem] md:top-[17rem] right-24 md:right-[18%] w-12 h-12 rounded-full bg-white shadow-xl shadow-sky-100/50 items-center justify-center text-[10px] font-bold text-sky-500 z-0 animate-bounce" style={{ animationDuration: '3.8s' }}>Python</div>
+          <div className="hidden md:flex absolute top-[21rem] md:top-[26rem] right-40 md:right-[5%] w-14 h-14 rounded-full bg-white shadow-xl shadow-sky-100/50 items-center justify-center text-[10px] font-bold text-sky-500 z-0 animate-bounce" style={{ animationDuration: '4.1s' }}>MySQL</div>
+          <div className="hidden md:flex absolute -top-6 md:-top-10 right-1/3 md:right-[40%] w-12 h-12 rounded-full bg-white shadow-xl shadow-sky-100/50 items-center justify-center text-[9px] font-bold text-sky-500 z-0 animate-bounce" style={{ animationDuration: '3.6s' }}>Firebase</div>
 
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 leading-tight relative z-10 pt-4">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 leading-tight relative z-10 pt-4">
             Make Your Application Design<br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600 animate-pulse">Come True</span>
           </h1>
@@ -51,11 +51,11 @@ export default function Portfolio() {
             Turn your business concepts into powerful digital assets. We don't just build websites and applications; we create strategic tools designed to drive growth, enhance user engagement, and streamline your operations. Let us handle the technical complexity so you can focus on leading your industry.
           </p>
 
-          <div className="mt-10 flex gap-4 justify-center relative z-10">
-            <a href="#project" className="bg-sky-500 text-white px-8 py-3 rounded-full text-sm font-semibold hover:bg-sky-600 shadow-xl shadow-sky-500/30 transition inline-flex items-center justify-center cursor-pointer">
+          <div className="mt-10 flex flex-col md:flex-row gap-4 px-6 md:px-0 justify-center relative z-10">
+            <a href="#project" className="bg-sky-500 text-white px-8 py-3 rounded-full text-sm font-semibold hover:bg-sky-600 shadow-xl shadow-sky-500/30 transition inline-flex items-center justify-center cursor-pointer w-full md:w-auto">
               Explore My Project
             </a>
-            <a href="#contact" className="bg-sky-100 text-sky-600 px-8 py-3 rounded-full text-sm font-semibold hover:bg-sky-200 transition inline-flex items-center justify-center cursor-pointer">
+            <a href="#contact" className="bg-sky-100 text-sky-600 px-8 py-3 rounded-full text-sm font-semibold hover:bg-sky-200 transition inline-flex items-center justify-center cursor-pointer w-full md:w-auto">
               Contact Me
             </a>
           </div>
@@ -90,31 +90,31 @@ export default function Portfolio() {
       </div>
 
       {/* About / Skills Section */}
-      <section id="about" className="pt-24 md:pt-28 pb-20 px-8 md:px-24 bg-white w-full flex flex-col gap-20">
+      <section id="about" className="pt-24 md:pt-28 pb-20 px-6 md:px-12 lg:px-24 bg-white w-full flex flex-col gap-20">
         <div className="max-w-6xl mx-auto flex flex-col gap-20">
-          <div className="flex flex-col md:flex-row items-center md:items-start gap-20">
+          <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-20">
             {/* Left: Profile Image */}
-            <div className="relative w-full md:w-1/2 flex justify-center">
+            <div className="relative w-full lg:w-1/2 flex justify-center">
               {/* Background circles effect */}
               <div className="absolute inset-0 flex items-center justify-center -z-10 group">
-                <div className="w-80 h-80 bg-sky-50 rounded-full animate-pulse opacity-70"></div>
-                <div className="absolute w-80 h-80 rounded-full border border-sky-300 border-dashed animate-[spin_10s_linear_infinite]"></div>
+                <div className="w-56 h-56 sm:w-64 sm:h-64 md:w-80 md:h-80 bg-sky-50 rounded-full animate-pulse opacity-70"></div>
+                <div className="absolute w-56 h-56 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full border border-sky-300 border-dashed animate-[spin_10s_linear_infinite]"></div>
               </div>
 
-              <div className="w-72 h-72 md:w-80 md:h-80 rounded-full bg-white border-[8px] border-white shadow-2xl flex flex-col items-center justify-center relative overflow-visible group hover:-translate-y-2 hover:shadow-sky-500/20 transition-all duration-500">
+              <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full bg-white border-[6px] md:border-[8px] border-white shadow-2xl flex flex-col items-center justify-center relative overflow-visible group hover:-translate-y-2 hover:shadow-sky-500/20 transition-all duration-500">
                 <div className="absolute inset-0 rounded-full overflow-hidden">
                   <img src="/me.jpg" alt="Profile" className="w-full h-full object-cover object-top scale-100 group-hover:scale-110 transition-transform duration-700" />
                 </div>
 
                 {/* Floating Developer Badge */}
-                <div className="absolute -right-6 top-24 bg-sky-500 p-4 rounded-xl shadow-xl shadow-sky-500/40 border-4 border-white animate-bounce" style={{ animationDuration: '3s' }}>
-                  <Code2 className="text-white w-6 h-6" />
+                <div className="absolute -right-2 sm:-right-6 top-12 sm:top-24 bg-sky-500 p-3 sm:p-4 rounded-xl shadow-xl shadow-sky-500/40 border-4 border-white animate-bounce" style={{ animationDuration: '3s' }}>
+                  <Code2 className="text-white w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
 
                 {/* Profile Info Card */}
-                <div className="absolute -bottom-6 bg-white px-8 py-4 rounded-2xl shadow-xl shadow-gray-200/50 border border-gray-50 text-center w-max group-hover:-translate-y-2 transition-transform duration-500">
-                  <h3 className="font-bold text-gray-800 text-lg">Thanadol Jampatem</h3>
-                  <p className="text-xs text-sky-500 font-semibold mt-1">Software Engineer</p>
+                <div className="absolute -bottom-6 bg-white px-5 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl shadow-xl shadow-gray-200/50 border border-gray-50 text-center w-max group-hover:-translate-y-2 transition-transform duration-500">
+                  <h3 className="font-bold text-gray-800 text-sm sm:text-lg">Thanadol Jampatem</h3>
+                  <p className="text-[10px] sm:text-xs text-sky-500 font-semibold mt-1">Software Engineer</p>
                 </div>
               </div>
             </div>
@@ -122,7 +122,7 @@ export default function Portfolio() {
             {/* Right: Bio */}
             <div className="w-full md:w-1/2 md:pt-14 text-center md:text-left">
               <h2 className="text-3xl lg:text-4xl font-extrabold text-gray-800 leading-tight">
-                Hello,<br className="hidden md:block" /> <span className="text-sky-500 whitespace-nowrap">I&apos;m Thanadol Jampatem</span>
+                Hello,<br className="hidden md:block" /> <span className="text-sky-500 whitespace-normal md:whitespace-nowrap">I&apos;m Thanadol Jampatem</span>
               </h2>
               <p className="text-gray-500 text-sm md:text-base mt-6 leading-relaxed max-w-lg mx-auto md:mx-0">
                 I am a passionate developer with a deep interest in building modern websites and applications.
@@ -192,7 +192,7 @@ export default function Portfolio() {
       </section>
 
       {/* Experience & Education */}
-      <section className="bg-sky-50/50 py-20 px-8 md:px-24 w-full">
+      <section className="bg-sky-50/50 py-20 px-6 md:px-12 lg:px-24 w-full">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
           {/* Experience */}
           <div>
@@ -261,7 +261,7 @@ export default function Portfolio() {
       </section>
 
       {/* Project Section */}
-      <section id="project" className="bg-white py-20 px-8 md:px-24 w-full">
+      <section id="project" className="bg-white py-20 px-6 md:px-12 lg:px-24 w-full">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="flex justify-between items-center mb-10">
@@ -358,7 +358,7 @@ export default function Portfolio() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="bg-slate-50/50 py-20 px-8 md:px-24 w-full relative overflow-hidden">
+      <section id="contact" className="bg-slate-50/50 py-20 px-6 md:px-12 lg:px-24 w-full relative overflow-hidden">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 relative z-10 items-center">
           {/* Left: Contact Info */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
