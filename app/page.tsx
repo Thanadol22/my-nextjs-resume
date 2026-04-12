@@ -1,280 +1,442 @@
-"use client";
+import { Code2, MonitorPlay, Smartphone, Briefcase, Award, GraduationCap, Mail, Phone, MapPin, Instagram, Linkedin, Github, Coffee, MessageCircle, Edit3, Facebook, LineChart } from "lucide-react";
+import banner1 from "../assets/banner/1.png";
+import banner2 from "../assets/banner/2.png";
+import banner3 from "../assets/banner/3.png";
+import banner4 from "../assets/banner/4.png";
 
-import { useState } from "react";
-import Image from "next/image";
-import { Mail, Phone, MapPin, Facebook, Instagram, Globe, Code2, GraduationCap, Briefcase, User, ChevronDown, ChevronUp, X, ZoomIn } from "lucide-react";
-
-export default function Home() {
-  // State สำหรับจัดการการแสดงจำนวนรูปภาพ
-  const [showAll, setShowAll] = useState(false);
-  // State สำหรับเก็บ URL รูปภาพที่กำลังเปิดดูแบบเต็มหน้าจอ
-  const [selectedImg, setSelectedImg] = useState<string | null>(null);
-
-  const allProjects = [
-    { src: "/8.png" },
-    { src: "/9.png" },
-    { src: "/10.png" },
-    { src: "/4.png" },
-    { src: "/5.png" },
-    { src: "/6.png" },
-    { src: "/11.png" },
-    { src: "/12.png" },
-    { src: "/2.1.png" },
-    { src: "/2.2.png" },
-    { src: "/2.3.png" },
-    { src: "/2.4.png" },
-    { src: "/2.5.png" },
-    { src: "/3.8.jpg" },
-    { src: "/3.1.png" },
-    { src: "/3.2.png" },
-    { src: "/3.3.png" },
-    { src: "/3.4.png" },
-    { src: "/3.5.png" },
-    { src: "/3.6.png" },
-    { src: "/3.7.png" },
-  ];
-
-  // เลือกแสดงผล 3 รูปแรกถ้า showAll เป็น false
-  const displayedProjects = showAll ? allProjects : allProjects.slice(0, 3);
-
+export default function Portfolio() {
   return (
-    <div className="min-h-screen bg-slate-50 font-sans text-slate-800 relative">
+    <div className="min-h-screen bg-white font-sans pb-20">
+      {/* Navigation */}
+      <nav className="flex justify-between items-center px-8 md:px-24 py-6 bg-sky-50 w-full border-b border-gray-50 sticky top-0 z-50">
+        <div className="font-bold text-xl text-sky-500 flex gap-2">
+          <span className=" text-sky-500 px-2 py-1 rounded">THANA<span className="px-1 py-1 text-gray-800 tracking-widest">DOL</span></span>
 
-      {/* --- Lightbox Modal (แสดงเมื่อมีการคลิกที่รูปภาพ) --- */}
-      {selectedImg && (
-        <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-sm p-4 animate-in fade-in duration-300"
-          onClick={() => setSelectedImg(null)}
-        >
-          {/* ปุ่มปิด */}
-          <button
-            className="absolute top-6 right-6 text-white hover:text-blue-400 transition-colors z-[110]"
-            onClick={() => setSelectedImg(null)}
-          >
-            <X size={40} />
-          </button>
+        </div>
+        <div className="hidden md:flex gap-8 text-sm font-medium text-gray-500">
+          <a href="#intro" className="text-sky-500 border-b-2 border-sky-500 pb-1">Intro</a>
+          <a href="#about" className="hover:text-sky-500 transition">About</a>
+          <a href="#project" className="hover:text-sky-500 transition">Project</a>
+          <a href="#contact" className="hover:text-sky-500 transition">Contact</a>
+        </div>
+        <a href="#contact" className="bg-sky-500 text-white px-6 py-2 border-none rounded-full text-sm font-semibold hover:bg-sky-600 transition inline-flex items-center justify-center cursor-pointer">
+          Hire Me
+        </a>
+      </nav>
 
-          {/* รูปภาพเต็มหน้าจอ */}
-          <div className="relative w-full max-w-5xl h-[80vh] flex items-center justify-center">
-            <Image
-              src={selectedImg}
-              alt="Full view"
-              fill
-              className="object-contain"
-              priority
-            />
+      {/* Hero Section */}
+      <section id="intro" className="relative bg-sky-50 text-center w-full pt-16 pb-0 md:pb-24 overflow-hidden md:overflow-visible">
+        <div className="max-w-6xl mx-auto relative">
+
+
+
+          {/* Floating Tags Placeholders */}
+          <div className="absolute top-8 md:-top-4 left-16 md:left-[25%] w-16 h-16 rounded-full bg-white shadow-xl shadow-sky-100/50 flex items-center justify-center text-xs font-bold text-sky-500 z-0 animate-bounce" style={{ animationDuration: '3s' }}>HTML</div>
+          <div className="absolute top-32 md:top-36 left-4 md:left-[5%] w-16 h-16 rounded-full bg-white shadow-xl shadow-sky-100/50 flex items-center justify-center text-[10px] font-bold text-sky-500 text-center leading-tight z-0 animate-bounce" style={{ animationDuration: '4s' }}>Tailwind<br />CSS</div>
+          <div className="absolute top-[16rem] md:top-[18rem] left-24 md:left-[18%] w-12 h-12 rounded-full bg-white shadow-xl shadow-sky-100/50 flex items-center justify-center text-[10px] font-bold text-sky-500 z-0 animate-bounce" style={{ animationDuration: '3.5s' }}>CSS</div>
+          <div className="absolute top-[22rem] md:top-[28rem] left-8 md:left-[8%] w-14 h-14 rounded-full bg-white shadow-xl shadow-sky-100/50 flex items-center justify-center text-xs font-bold text-sky-500 z-0 animate-bounce" style={{ animationDuration: '4.5s' }}>JS</div>
+
+          <div className="absolute top-10 md:-top-2 right-16 md:right-[22%] w-14 h-14 rounded-full bg-white shadow-xl shadow-sky-100/50 flex items-center justify-center text-[10px] font-bold text-sky-500 z-0 animate-bounce" style={{ animationDuration: '3.2s' }}>Flutter</div>
+          <div className="absolute top-28 md:top-32 right-4 md:right-[6%] w-14 h-14 rounded-full bg-white shadow-xl shadow-sky-100/50 flex items-center justify-center text-[11px] font-bold text-sky-500 z-0 animate-bounce" style={{ animationDuration: '4.2s' }}>PHP</div>
+          <div className="absolute top-[14rem] md:top-[17rem] right-24 md:right-[18%] w-12 h-12 rounded-full bg-white shadow-xl shadow-sky-100/50 flex items-center justify-center text-[10px] font-bold text-sky-500 z-0 animate-bounce" style={{ animationDuration: '3.8s' }}>Python</div>
+          <div className="absolute top-[21rem] md:top-[26rem] right-40 md:right-[5%] w-14 h-14 rounded-full bg-white shadow-xl shadow-sky-100/50 flex items-center justify-center text-[10px] font-bold text-sky-500 z-0 animate-bounce" style={{ animationDuration: '4.1s' }}>MySQL</div>
+          <div className="absolute -top-6 md:-top-10 right-1/3 md:right-[40%] w-12 h-12 rounded-full bg-white shadow-xl shadow-sky-100/50 flex items-center justify-center text-[9px] font-bold text-sky-500 z-0 animate-bounce" style={{ animationDuration: '3.6s' }}>Firebase</div>
+
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 leading-tight relative z-10 pt-4">
+            Make Your Application Design<br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600 animate-pulse">Come True</span>
+          </h1>
+
+          <p className="mt-6 text-gray-500 text-sm md:text-base max-w-xl mx-auto relative z-10 px-4">
+            Turn your business concepts into powerful digital assets. We don't just build websites and applications; we create strategic tools designed to drive growth, enhance user engagement, and streamline your operations. Let us handle the technical complexity so you can focus on leading your industry.
+          </p>
+
+          <div className="mt-10 flex gap-4 justify-center relative z-10">
+            <a href="#project" className="bg-sky-500 text-white px-8 py-3 rounded-full text-sm font-semibold hover:bg-sky-600 shadow-xl shadow-sky-500/30 transition inline-flex items-center justify-center cursor-pointer">
+              Explore My Project
+            </a>
+            <a href="#contact" className="bg-sky-100 text-sky-600 px-8 py-3 rounded-full text-sm font-semibold hover:bg-sky-200 transition inline-flex items-center justify-center cursor-pointer">
+              Contact Me
+            </a>
           </div>
         </div>
-      )}
+      </section>
 
-      <div className="flex flex-col md:flex-row">
-        {/* --- Sidebar - Left Section --- */}
-        <aside className="w-full md:w-[320px] lg:w-[380px] bg-slate-900 text-white p-6 md:p-10 flex flex-col shrink-0">
-          <div className="text-center md:text-left mb-8 md:mb-10">
-            <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-blue-400">
-              THANADOL <br className="hidden md:block" />
-              <span className="text-white"> JAMPATEM</span>
-            </h1>
-            <div className="h-1 w-20 bg-blue-500 mt-4 mb-2 mx-auto md:mx-0"></div>
-            <p className="text-xs md:text-sm font-medium tracking-[0.2em] text-slate-400 uppercase">
-              Frontend Developer
-            </p>
+      {/* Stats Banner */}
+      <div className="-mt-[52px] md:-mt-[60px] mx-auto max-w-4xl bg-white shadow-[0_20px_50px_-12px_rgba(0,0,0,0.05)] hover:shadow-[0_25px_60px_-15px_rgba(14,165,233,0.2)] hover:-translate-y-1 transition-all duration-300 rounded-[2rem] p-6 md:p-8 flex flex-col md:flex-row justify-around items-center border border-gray-50 relative z-20 w-[90%] lg:w-full group">
+        <div className="flex items-center gap-4 w-full md:w-1/3 justify-center md:justify-start md:pl-6 group-hover:scale-105 transition-transform duration-300">
+          <div className="bg-sky-50 p-4 rounded-2xl"><MonitorPlay className="w-6 h-6 text-sky-500" /></div>
+          <div className="text-left">
+            <p className="text-xs text-gray-400 font-semibold mb-1">Web Developing</p>
+            <p className="text-2xl font-bold text-gray-800 tracking-tight">2</p>
           </div>
+        </div>
+        <div className="h-12 w-px bg-gray-100 hidden md:block"></div>
+        <div className="flex items-center gap-4 mt-6 md:mt-0 w-full md:w-1/3 justify-center group-hover:scale-105 transition-transform duration-300 xl:delay-75">
+          <div className="bg-sky-50 p-4 rounded-2xl"><Smartphone className="w-6 h-6 text-sky-500" /></div>
+          <div className="text-left">
+            <p className="text-xs text-gray-400 font-semibold mb-1">Mobile Developing</p>
+            <p className="text-2xl font-bold text-gray-800 tracking-tight">2</p>
+          </div>
+        </div>
+        <div className="h-12 w-px bg-gray-100 hidden md:block"></div>
+        <div className="flex items-center gap-4 mt-6 md:mt-0 w-full md:w-1/3 justify-center md:justify-end md:pr-6 group-hover:scale-105 transition-transform duration-300 xl:delay-150">
+          <div className="bg-sky-50 p-4 rounded-2xl"><Code2 className="w-6 h-6 text-sky-500" /></div>
+          <div className="text-left">
+            <p className="text-xs text-gray-400 font-semibold mb-1">Backend Developing</p>
+            <p className="text-2xl font-bold text-gray-800 tracking-tight">2</p>
+          </div>
+        </div>
+      </div>
 
-          <div className="flex justify-center mb-10 md:mb-12">
-            <div className="relative w-40 h-48 md:w-48 md:h-56 group">
-              <div className="absolute inset-0 bg-blue-600 rounded-[2rem] rotate-6 group-hover:rotate-3 transition-transform"></div>
-              <div className="relative w-full h-full border-2 border-slate-700 rounded-[2rem] overflow-hidden bg-slate-800 shadow-2xl">
-                <Image src="/me.jpg" alt="Profile" fill className="object-cover" priority />
+      {/* About / Skills Section */}
+      <section id="about" className="pt-24 md:pt-28 pb-20 px-8 md:px-24 bg-white w-full flex flex-col gap-20">
+        <div className="max-w-6xl mx-auto flex flex-col gap-20">
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-20">
+            {/* Left: Profile Image */}
+            <div className="relative w-full md:w-1/2 flex justify-center">
+              {/* Background circles effect */}
+              <div className="absolute inset-0 flex items-center justify-center -z-10 group">
+                <div className="w-80 h-80 bg-sky-50 rounded-full animate-pulse opacity-70"></div>
+                <div className="absolute w-80 h-80 rounded-full border border-sky-300 border-dashed animate-[spin_10s_linear_infinite]"></div>
               </div>
-            </div>
-          </div>
 
-          <div className="mb-8 md:mb-10">
-            <h2 className="text-base md:text-lg font-bold flex items-center gap-2 mb-4 md:mb-6 border-b border-slate-700 pb-2 uppercase tracking-wider">
-              <Mail size={18} className="text-blue-400" /> Contacts
-            </h2>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-3 md:gap-4 text-xs md:text-sm text-slate-300">
-              <li className="flex items-start gap-3 col-span-full">
-                <Mail size={16} className="mt-1 text-blue-400 shrink-0" />
-                <span className="break-all">Thanadolpetch22@gmail.com</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Phone size={16} className="text-blue-400 shrink-0" />
-                <span>+66 61 912 6201</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Facebook size={16} className="text-blue-400 shrink-0" />
-                <span className="truncate">Thanadol Jampatem</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Instagram size={16} className="text-blue-400 shrink-0" />
-                <span>thanadol_jpt</span>
-              </li>
-              <li className="flex items-start gap-3 col-span-full">
-                <MapPin size={16} className="mt-1 text-blue-400 shrink-0" />
-                <span>Samutsongkharm, Thailand</span>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h2 className="text-base md:text-lg font-bold flex items-center gap-2 mb-4 md:mb-6 border-b border-slate-700 pb-2 uppercase tracking-wider text-blue-400">
-              <Code2 size={18} /> Skills
-            </h2>
-            <div className="flex flex-wrap gap-2 md:gap-3">
-              {[
-                { name: "Dart", level: "Junior" },
-                { name: "PHP", level: "Junior" },
-                { name: "HTML / CSS", level: "Junior" },
-                { name: "TypeScript", level: "Junior" },
-                { name: "Python", level: "Junior" },
-                { name: "Java", level: "Junior" },
-                { name: "SQL", level: "Junior" },
-                { name: "UX/UI Design", level: "Junior" },
-              ].map((skill) => (
-                <div key={skill.name} className="px-3 py-1.5 bg-slate-800 border border-slate-700 rounded-lg flex flex-col items-start transition-all hover:border-blue-500 hover:bg-slate-700 group">
-                  <span className="text-xs md:text-sm font-semibold text-white group-hover:text-blue-400">{skill.name}</span>
-                  <span className="text-[10px] text-slate-500 uppercase font-medium tracking-tighter">{skill.level}</span>
+              <div className="w-72 h-72 md:w-80 md:h-80 rounded-full bg-white border-[8px] border-white shadow-2xl flex flex-col items-center justify-center relative overflow-visible group hover:-translate-y-2 hover:shadow-sky-500/20 transition-all duration-500">
+                <div className="absolute inset-0 rounded-full overflow-hidden">
+                  <img src="/me.jpg" alt="Profile" className="w-full h-full object-cover object-top scale-100 group-hover:scale-110 transition-transform duration-700" />
                 </div>
-              ))}
-            </div>
-          </div>
-        </aside>
 
-        {/* --- Main Content --- */}
-        <main className="flex-1 p-6 sm:p-10 md:p-16 max-w-5xl mx-auto w-full">
-
-          <section className="mb-12 md:mb-16">
-            <h2 className="text-xl md:text-2xl font-bold flex items-center gap-3 text-slate-900 mb-6 uppercase tracking-tight">
-              <User className="text-blue-600" /> About Me
-            </h2>
-            <div className="text-base md:text-lg leading-relaxed text-slate-600 text-justify tracking-tighter md:tracking-normal">
-              <p>I am a passionate developer with a deep interest in building modern websites and applications. I thrive on the challenges of software development and am constantly exploring new technologies to enhance my technical skills.</p>
-            </div>
-          </section>
-
-          <section className="mb-12 md:mb-16">
-            <h2 className="text-xl md:text-2xl font-bold flex items-center gap-3 text-slate-900 mb-8 uppercase tracking-tight text-justify">
-              <GraduationCap className="text-blue-600" /> Education
-            </h2>
-            <div className="space-y-8 relative before:absolute before:inset-0 before:left-3 before:w-0.5 before:bg-slate-200">
-              <div className="relative pl-10">
-                <div className="absolute left-0 top-1.5 w-6 h-6 bg-white border-4 border-blue-500 rounded-full shadow-md"></div>
-                <h3 className="text-lg md:text-xl font-bold text-slate-800">University (Present)</h3>
-                <p className="text-blue-600 font-medium">Rajamangala University of Technology Thanyaburi</p>
-                <p className="text-sm text-slate-500 mt-1">Major in Computer Engineering</p>
-              </div>
-              <div className="relative pl-10">
-                <div className="absolute left-0 top-1.5 w-6 h-6 bg-white border-4 border-slate-300 rounded-full shadow-md"></div>
-                <h3 className="text-lg md:text-xl font-bold text-slate-800">High Vocational Certificate (Associate Degree)</h3>
-                <p className="text-blue-600 font-medium">Samutsongkharm Technical College</p>
-                <p className="text-sm text-slate-500 mt-1">Major in Software Developers</p>
-              </div>
-              <div className="relative pl-10">
-                <div className="absolute left-0 top-1.5 w-6 h-6 bg-white border-4 border-slate-300 rounded-full shadow-md"></div>
-                <h3 className="text-lg md:text-xl font-bold text-slate-800">Vocational Certificate</h3>
-                <p className="text-blue-600 font-medium">Samutsongkharm Technical College</p>
-                <p className="text-sm text-slate-500 mt-1">Major in Information Technology</p>
-              </div>
-
-            </div>
-          </section>
-
-          <section className="mb-12 md:mb-16">
-            <h2 className="text-xl md:text-2xl font-bold flex items-center gap-3 text-slate-900 mb-8 uppercase tracking-tight">
-              <Briefcase className="text-blue-600" /> Internship
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
-              {[
-                { company: "Bangkok Web Solution", role: "Frontend Developer & Design UX/UI" },
-                { company: "Muang Thai Capital", role: "Customer data recording" },
-                { company: "Office of Natural Resources", role: "Manage submitted document data" },
-              ].map((item, idx) => (
-                <div key={idx} className="p-5 md:p-6 bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-md hover:-translate-y-1 transition-all">
-                  <h3 className="font-bold text-base md:text-lg text-slate-800 underline decoration-blue-500/30 underline-offset-4">{item.company}</h3>
-                  <p className="text-blue-600 text-sm mt-2 font-medium">{item.role}</p>
+                {/* Floating Developer Badge */}
+                <div className="absolute -right-6 top-24 bg-sky-500 p-4 rounded-xl shadow-xl shadow-sky-500/40 border-4 border-white animate-bounce" style={{ animationDuration: '3s' }}>
+                  <Code2 className="text-white w-6 h-6" />
                 </div>
-              ))}
-            </div>
-          </section>
 
-          <section className="mb-12 md:mb-16">
-            <h2 className="text-xl md:text-2xl font-bold flex items-center gap-3 text-slate-900 mb-8 uppercase tracking-tight">
-              <Globe className="text-blue-600" /> Projects
-            </h2>
-            <div className="space-y-6 md:space-y-8 text-justify">
-
-              <div className="group p-6 md:p-8 bg-white border border-slate-200 rounded-[1.5rem] md:rounded-[2rem] shadow-sm hover:border-blue-200 hover:shadow-lg transition-all">
-                <h3 className="text-lg md:text-xl font-bold text-blue-800 mb-3 flex flex-wrap items-center gap-2">
-                  BangkokSpaAcademy <span className="text-[10px] font-normal text-slate-500 bg-slate-100 px-3 py-1 rounded-full italic uppercase tracking-wider">Web App</span>
-                </h3>
-                <p className="text-sm md:text-base text-slate-600 leading-relaxed  tracking-tighter md:tracking-normal">
-                  Developed a comprehensive platform for a spa academy. Features an online course catalog and a professional storefront with a clean, calming aesthetic to enhance user experience.
-                </p>
-              </div>
-              <div className="group p-6 md:p-8 bg-white border border-slate-200 rounded-[1.5rem] md:rounded-[2rem] shadow-sm hover:border-blue-200 hover:shadow-lg transition-all">
-                <h3 className="text-lg md:text-xl font-bold text-blue-800 mb-3 flex flex-wrap items-center gap-2">
-                  Ec Students Projects <span className="text-[10px] font-normal text-slate-500 bg-slate-100 px-3 py-1 rounded-full italic uppercase tracking-wider">Mobile App</span>
-                </h3>
-                <p className="text-sm md:text-base text-slate-600 leading-relaxed  tracking-tighter md:tracking-normal">
-                  Developed a centralized application to digitize and manage the department&apos;s historical project archives. QR code scanning for seamless borrowing/returning and an automated faculty approval workflow.                </p>
-              </div>
-            </div>
-          </section>
-
-          {/* --- Portfolio Gallery Section --- */}
-          <section className="mt-12">
-            <div className="flex flex-col gap-6 p-6 md:p-10 bg-white rounded-[2.5rem] border border-slate-200 shadow-sm">
-              <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
-                <div>
-                  <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2 uppercase tracking-tight text-center md:text-left">Portfolio Showcase</h2>
-                  <p className="text-sm md:text-base text-slate-500 font-medium text-center md:text-left italic">Click on image to view full size</p>
-                </div>
-                <div className="text-blue-600 font-semibold text-sm flex items-center gap-2 justify-center md:justify-start">
-                  <ZoomIn size={16} /> Showcase Gallery
+                {/* Profile Info Card */}
+                <div className="absolute -bottom-6 bg-white px-8 py-4 rounded-2xl shadow-xl shadow-gray-200/50 border border-gray-50 text-center w-max group-hover:-translate-y-2 transition-transform duration-500">
+                  <h3 className="font-bold text-gray-800 text-lg">Thanadol Jampatem</h3>
+                  <p className="text-xs text-sky-500 font-semibold mt-1">Software Engineer</p>
                 </div>
               </div>
+            </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-                {displayedProjects.map((item, index) => (
-                  <div
-                    key={index}
-                    className="group relative animate-in fade-in zoom-in duration-500 cursor-zoom-in"
-                    onClick={() => setSelectedImg(item.src)}
-                  >
-                    <div className="relative aspect-video md:aspect-square overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 transition-all duration-300 group-hover:shadow-xl group-hover:ring-4 group-hover:ring-blue-500/20 group-hover:-translate-y-1">
-                      <Image src={item.src} alt={`Work ${index + 1}`} fill className="object-cover transition-transform duration-500 group-hover:scale-110" />
+            {/* Right: Bio */}
+            <div className="w-full md:w-1/2 md:pt-14 text-center md:text-left">
+              <h2 className="text-3xl lg:text-4xl font-extrabold text-gray-800 leading-tight">
+                Hello,<br className="hidden md:block" /> <span className="text-sky-500 whitespace-nowrap">I&apos;m Thanadol Jampatem</span>
+              </h2>
+              <p className="text-gray-500 text-sm md:text-base mt-6 leading-relaxed max-w-lg mx-auto md:mx-0">
+                I am a passionate developer with a deep interest in building modern websites and applications.
+                I thrive on the challenges of software development and am constantly exploring new technologies to enhance my technical skills.
+              </p>
+            </div>
+          </div></div>
 
-                      {/* Hover Overlay */}
-                      <div className="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <div className="bg-white/20 backdrop-blur-md p-3 rounded-full border border-white/40 transform scale-75 group-hover:scale-100 transition-transform duration-300">
-                          <ZoomIn size={24} className="text-white" />
-                        </div>
-                      </div>
+        {/* Bottom: Skills */}
+        <div className="w-full bg-white rounded-[2rem] shadow-xl shadow-gray-100/50 p-8 md:p-12 border border-gray-100">
+          <h4 className="font-extrabold text-gray-800 text-2xl mb-10 text-center">Technical Skills</h4>
 
-
-                    </div>
-                  </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Frontend */}
+            <div className="flex flex-col">
+              <h5 className="font-bold text-gray-800 mb-4 flex items-center gap-2 border-b border-gray-100 pb-3">
+                <MonitorPlay className="w-4 h-4 text-sky-500" />
+                Frontend
+              </h5>
+              <div className="flex flex-wrap gap-2">
+                {["HTML", "CSS", "Tailwind CSS", "JavaScript"].map((skill) => (
+                  <span key={skill} className="bg-sky-50 text-sky-600 border border-sky-100/50 px-3 py-1.5 rounded-lg text-xs font-bold transition hover:bg-sky-100">{skill}</span>
                 ))}
               </div>
+            </div>
 
-              <div className="mt-4 pt-6 border-t border-slate-100 flex justify-center">
-                <button
-                  onClick={() => setShowAll(!showAll)}
-                  className="px-8 py-3 bg-slate-900 text-white rounded-full font-bold text-sm hover:bg-blue-600 transition-all shadow-lg shadow-slate-200 active:scale-95 flex items-center gap-2 group"
-                >
-                  {showAll ? (
-                    <>Show Less <ChevronUp size={16} className="group-hover:-translate-y-1 transition-transform" /></>
-                  ) : (
-                    <>View All Projects <ChevronDown size={16} className="group-hover:translate-y-1 transition-transform" /></>
-                  )}
-                </button>
+            {/* Mobile */}
+            <div className="flex flex-col">
+              <h5 className="font-bold text-gray-800 mb-4 flex items-center gap-2 border-b border-gray-100 pb-3">
+                <Smartphone className="w-4 h-4 text-sky-500" />
+                Mobile
+              </h5>
+              <div className="flex flex-wrap gap-2">
+                {["Flutter (Dart)"].map((skill) => (
+                  <span key={skill} className="bg-sky-50 text-sky-600 border border-sky-100/50 px-3 py-1.5 rounded-lg text-xs font-bold transition hover:bg-sky-100">{skill}</span>
+                ))}
               </div>
             </div>
-          </section>
-        </main>
-      </div>
+
+            {/* Backend */}
+            <div className="flex flex-col">
+              <h5 className="font-bold text-gray-800 mb-4 flex items-center gap-2 border-b border-gray-100 pb-3">
+                <Code2 className="w-4 h-4 text-sky-500" />
+                Backend
+              </h5>
+              <div className="flex flex-wrap gap-2">
+                {["PHP", "MySQL", "Firebase", "Python"].map((skill) => (
+                  <span key={skill} className="bg-sky-50 text-sky-600 border border-sky-100/50 px-3 py-1.5 rounded-lg text-xs font-bold transition hover:bg-sky-100">{skill}</span>
+                ))}
+              </div>
+            </div>
+
+            {/* Tools */}
+            <div className="flex flex-col">
+              <h5 className="font-bold text-gray-800 mb-4 flex items-center gap-2 border-b border-gray-100 pb-3">
+                <Briefcase className="w-4 h-4 text-sky-500" />
+                Tools
+              </h5>
+              <div className="flex flex-wrap gap-2">
+                {["Visual Studio Code", "Antigravity", "Github", "Figma", "Photoshop", "Canva"].map((skill) => (
+                  <span key={skill} className="bg-sky-50 text-sky-600 border border-sky-100/50 px-3 py-1.5 rounded-lg text-xs font-bold transition hover:bg-sky-100">{skill}</span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Experience & Education */}
+      <section className="bg-sky-50/50 py-20 px-8 md:px-24 w-full">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
+          {/* Experience */}
+          <div>
+            <h3 className="text-2xl font-extrabold text-gray-800 mb-10">Internship</h3>
+            <div className="flex flex-col gap-6">
+              {/* Card 1 */}
+              <div className="bg-white px-6 py-5 rounded-2xl shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] flex gap-6 items-center hover:shadow-[0_8px_30px_-10px_rgba(0,0,0,0.1)] transition duration-300">
+                <div className="bg-sky-50 p-4 rounded-2xl shrink-0 text-sky-500">
+                  <Briefcase className="w-6 h-6" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-sky-500 text-sm">Bangkok Web Solution</h4>
+                  <ul className="text-gray-600 text-xs mt-2 list-disc pl-4 space-y-1">
+                    <li>Designed user-centric UI/UX layouts using Figma to enhance digital experiences.</li>
+                    <li>Developed responsive web interfaces with HTML, CSS, Tailwind CSS, and PHP.</li>
+                    <li>Collaborated with mentors to deliver high-quality tasks within project deadlines.</li>
+                  </ul>
+                  <p className="text-gray-400 text-[11px] mt-2">April 2025 - June 2025</p>
+                </div>
+              </div>
+              {/* Card 2 */}
+              <div className="bg-white px-6 py-5 rounded-2xl shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] flex gap-6 items-center hover:shadow-[0_8px_30px_-10px_rgba(0,0,0,0.1)] transition duration-300">
+                <div className="bg-sky-50 p-4 rounded-2xl shrink-0 text-sky-500">
+                  <Briefcase className="w-6 h-6" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-sky-500 text-sm">Muang Thai Capital</h4>
+                  <ul className="text-gray-600 text-xs mt-2 list-disc pl-4 space-y-1">
+                    <li>Processed customer payments and financial transactions via SAP with high accuracy.</li>
+                    <li>Collaborated with Accounting and Finance teams to ensure precise financial data reconciliation.</li>                  </ul>
+                  <p className="text-gray-400 text-[11px] mt-2">March 2022 - May 2022</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Education */}
+          <div>
+            <h3 className="text-2xl font-extrabold text-gray-800 mb-10">Education</h3>
+            <div className="flex flex-col gap-6">
+              {/* Card 1 */}
+              <div className="bg-white px-6 py-5 rounded-2xl shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] flex gap-6 items-center hover:shadow-[0_8px_30px_-10px_rgba(0,0,0,0.1)] transition duration-300">
+                <div className="bg-sky-50 p-4 rounded-2xl shrink-0 text-sky-500">
+                  <GraduationCap className="w-6 h-6" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-sky-500 text-sm">Bachelor of Engineering (Computer Engineering)</h4>
+                  <p className="text-gray-500 text-[11px] mt-1 line-clamp-1">Rajamangala University of Technology Thanyaburi</p>
+                  <p className="text-gray-400 text-[11px] mt-1">2023 - 2026</p>
+                </div>
+              </div>
+              {/* Card 2 */}
+              <div className="bg-white px-6 py-5 rounded-2xl shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] flex gap-6 items-center hover:shadow-[0_8px_30px_-10px_rgba(0,0,0,0.1)] transition duration-300">
+                <div className="bg-sky-50 p-4 rounded-2xl shrink-0 text-sky-500">
+                  <GraduationCap className="w-6 h-6" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-sky-500 text-sm">High Vocational Certificate (Software Developers)</h4>
+                  <p className="text-gray-500 text-[11px] mt-1 line-clamp-1">Samutsongkharm Technical College</p>
+                  <p className="text-gray-400 text-[11px] mt-1">2021 - 2023</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Project Section */}
+      <section id="project" className="bg-white py-20 px-8 md:px-24 w-full">
+        <div className="max-w-6xl mx-auto">
+          {/* Header */}
+          <div className="flex justify-between items-center mb-10">
+            <h3 className="text-2xl font-extrabold text-gray-800">Project Experience</h3>
+
+          </div>
+
+          {/* Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Project Card 1 */}
+            <div className="bg-white rounded-[2rem] shadow-[0_8px_30px_-5px_rgba(0,0,0,0.05)] border border-gray-100 overflow-hidden group hover:-translate-y-2 hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.1)] transition duration-300 flex flex-col h-full">
+              <div className="h-64 w-full bg-[#f4f6f8] flex items-center justify-center text-[#8eb0c8] relative overflow-hidden shrink-0">
+                <span className="absolute top-4 right-4 bg-sky-500 text-white px-3 py-1 rounded-full text-[11px] font-bold shadow-lg shadow-sky-500/20 z-10">Web Application</span>
+                <img src={banner1.src} alt="Project 1" className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300" />
+              </div>
+              <div className="p-8 flex flex-col flex-1">
+                <h4 className="font-bold text-gray-800 text-lg md:text-[20px] leading-snug mb-3">Massage course and spa product management system</h4>
+                <span className="text-sky-500 text-[15px] font-bold block mb-4">(Excellent Project Award)</span>
+                <ul className="text-[13px] text-gray-500 mb-8 leading-relaxed flex-1 list-disc pl-4 space-y-1.5">
+                  <li>Developed a Full-stack Spa System (PHP/MySQL) integrating booking, inventory, and POS.</li>
+                  <li>Automated Email Notifications to streamline booking confirmations and user communication.</li>
+                </ul>
+                <div className="flex flex-wrap gap-2 mt-auto">
+                  <span className="bg-gray-50 text-gray-500 px-3.5 py-1.5 rounded-lg text-[11px] font-bold border border-gray-100">PHP</span>
+                  <span className="bg-gray-50 text-gray-500 px-3.5 py-1.5 rounded-lg text-[11px] font-bold border border-gray-100">MySQL</span>
+                  <span className="bg-gray-50 text-gray-500 px-3.5 py-1.5 rounded-lg text-[11px] font-bold border border-gray-100">JavaScript</span>
+                  <span className="bg-gray-50 text-gray-500 px-3.5 py-1.5 rounded-lg text-[11px] font-bold border border-gray-100">CSS</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Project Card 2 */}
+            <div className="bg-white rounded-[2rem] shadow-[0_8px_30px_-5px_rgba(0,0,0,0.05)] border border-gray-100 overflow-hidden group hover:-translate-y-2 hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.1)] transition duration-300 flex flex-col h-full">
+              <div className="h-64 w-full bg-[#f4f6f8] flex items-center justify-center text-[#8eb0c8] relative overflow-hidden shrink-0">
+                <span className="absolute top-4 right-4 bg-sky-500 text-white px-3 py-1 rounded-full text-[11px] font-bold shadow-lg shadow-sky-500/20 z-10">Web Application</span>
+                <img src={banner2.src} alt="Project 2" className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300" />
+              </div>
+              <div className="p-8 flex flex-col flex-1">
+                <h4 className="font-bold text-gray-800 text-lg md:text-[20px] leading-snug mb-3">University Shuttle Tracking (KMUTNB)</h4>
+                <ul className="text-[13px] text-gray-500 mb-8 leading-relaxed flex-1 list-disc pl-4 space-y-1.5">
+                  <li>Developed a Multi-platform Tracking System (Web & Mobile) for university shuttles, featuring dedicated interfaces for admins, students, and drivers.
+                  </li>
+                  <li>Integrated ESP32 and GT-U7 GPS Modules to stream real-time vehicle locations and live updates via Firebase.</li>
+                </ul>
+                <div className="flex flex-wrap gap-2 mt-auto">
+                  <span className="bg-gray-50 text-gray-500 px-3.5 py-1.5 rounded-lg text-[11px] font-bold border border-gray-100">PHP</span>
+                  <span className="bg-gray-50 text-gray-500 px-3.5 py-1.5 rounded-lg text-[11px] font-bold border border-gray-100">Firebase</span>
+                  <span className="bg-gray-50 text-gray-500 px-3.5 py-1.5 rounded-lg text-[11px] font-bold border border-gray-100">Tailwind CSS</span>
+
+                </div>
+              </div>
+            </div>
+
+            {/* Project Card 3 */}
+            <div className="bg-white rounded-[2rem] shadow-[0_8px_30px_-5px_rgba(0,0,0,0.05)] border border-gray-100 overflow-hidden group hover:-translate-y-2 hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.1)] transition duration-300 flex flex-col h-full">
+              <div className="h-64 w-full bg-[#f4f6f8] flex items-center justify-center text-[#8eb0c8] relative overflow-hidden shrink-0">
+                <span className="absolute top-4 right-4 bg-sky-500 text-white px-3 py-1 rounded-full text-[11px] font-bold shadow-lg shadow-sky-500/20 z-10">Mobile App</span>
+                <img src={banner3.src} alt="Project 3" className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300" />
+              </div>
+              <div className="p-8 flex flex-col flex-1">
+                <h4 className="font-bold text-gray-800 text-lg md:text-[20px] leading-snug mb-3">University Shuttle Tracking (KMUTNB)</h4>
+                <ul className="text-[13px] text-gray-500 mb-8 leading-relaxed flex-1 list-disc pl-4 space-y-1.5">
+                  <li>Developed a Multi-platform Tracking System (Web & Mobile) for university shuttles, featuring dedicated interfaces for admins, students, and drivers.</li>
+                  <li>Integrated ESP32 and GT-U7 GPS Modules to stream real-time vehicle locations and live updates via Firebase.</li>
+                </ul>
+                <div className="flex flex-wrap gap-2 mt-auto">
+                  <span className="bg-gray-50 text-gray-500 px-3.5 py-1.5 rounded-lg text-[11px] font-bold border border-gray-100">Flutter (Dart)</span>
+                  <span className="bg-gray-50 text-gray-500 px-3.5 py-1.5 rounded-lg text-[11px] font-bold border border-gray-100">Firebase</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Project Card 4 */}
+            <div className="bg-white rounded-[2rem] shadow-[0_8px_30px_-5px_rgba(0,0,0,0.05)] border border-gray-100 overflow-hidden group hover:-translate-y-2 hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.1)] transition duration-300 flex flex-col h-full">
+              <div className="h-64 w-full bg-[#f4f6f8] flex items-center justify-center text-[#8eb0c8] relative overflow-hidden shrink-0">
+                <span className="absolute top-4 right-4 bg-sky-500 text-white px-3 py-1 rounded-full text-[11px] font-bold shadow-lg shadow-sky-500/20 z-10">Mobile App</span>
+                <img src={banner4.src} alt="Project 4" className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300" />
+              </div>
+              <div className="p-8 flex flex-col flex-1">
+                <h4 className="font-bold text-gray-800 text-lg md:text-[20px] leading-snug mb-3">Borrow & Return: Project Reports</h4>
+                <ul className="text-[13px] text-gray-500 mb-8 leading-relaxed flex-1 list-disc pl-4 space-y-1.5">
+                  <li>Developed a Flutter & Firebase app for digitizing project archives with QR Code scanning for easy borrowing.
+                  </li>
+                  <li>Integrated an automated approval system to track borrowing history and streamline faculty authorizations.</li>
+                </ul>
+                <div className="flex flex-wrap gap-2 mt-auto">
+                  <span className="bg-gray-50 text-gray-500 px-3.5 py-1.5 rounded-lg text-[11px] font-bold border border-gray-100">Flutter (Dart)</span>
+                  <span className="bg-gray-50 text-gray-500 px-3.5 py-1.5 rounded-lg text-[11px] font-bold border border-gray-100">Firebase</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="bg-slate-50/50 py-20 px-8 md:px-24 w-full relative overflow-hidden">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 relative z-10 items-center">
+          {/* Left: Contact Info */}
+          <div className="flex flex-col items-center md:items-start text-center md:text-left">
+            <h3 className="text-2xl font-extrabold text-gray-800 mb-10 w-full">Contact</h3>
+
+            {/* Profile & Social Group */}
+            <div className="flex flex-col items-center">
+              {/* Contact Image */}
+              <div className="relative w-56 h-56 bg-sky-100 rounded-full border-[6px] border-white shadow-2xl mb-8 overflow-hidden group">
+                <img src="/me2.webp" alt="Contact Profile" className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
+              </div>
+
+              <p className="text-sky-500 font-bold text-sm mb-6 text-center">Social Media & Productivity</p>
+              <div className="flex gap-4 justify-center">
+                <a href="https://www.instagram.com/thanadol_jpt/" className="w-10 h-10 rounded-full bg-sky-500 text-white flex items-center justify-center shadow-lg shadow-sky-500/30 hover:-translate-y-1 transition"><Instagram className="w-4 h-4" /></a>
+                <a href="https://www.facebook.com/thanadol.petch" className="w-10 h-10 rounded-full bg-sky-500 text-white flex items-center justify-center shadow-lg shadow-sky-500/30 hover:-translate-y-1 transition"><Facebook className="w-4 h-4" /></a>
+                <a href="https://github.com/Thanadol22" className="w-10 h-10 rounded-full bg-sky-500 text-white flex items-center justify-center shadow-lg shadow-sky-500/30 hover:-translate-y-1 transition"><Github className="w-4 h-4" /></a>
+              </div>
+            </div>
+          </div>
+
+          {/* Right: Contact Cards */}
+          <div className="relative w-full h-full flex flex-col justify-center items-center md:items-end gap-6 py-10 md:py-0">
+            {/* Abstract Background Circles */}
+            <div className="absolute top-1/2 left-1/2 md:left-2/3 transform -translate-x-1/2 -translate-y-1/2 w-[22rem] h-[22rem] md:w-[28rem] md:h-[28rem] rounded-full border-[1px] border-sky-200 -z-10 flex items-center justify-center">
+              <div className="w-[16rem] h-[16rem] md:w-[20rem] md:h-[20rem] rounded-full border-[1px] border-sky-200 relative">
+                <div className="absolute -top-1.5 left-1/2 w-3 h-3 bg-sky-500 rounded-full"></div>
+                <div className="absolute top-1/2 -right-1.5 w-3 h-3 bg-sky-500 rounded-full"></div>
+              </div>
+            </div>
+
+            {/* Email Card */}
+            <div className="bg-white w-full max-w-sm rounded-[1.5rem] p-4 flex items-center gap-4 shadow-[0_15px_40px_-15px_rgba(0,0,0,0.1)] border border-gray-50 transform md:-translate-x-12 hover:-translate-y-1 transition duration-300">
+              <div className="bg-sky-50 w-12 h-12 rounded-xl flex items-center justify-center shrink-0">
+                <Mail className="w-5 h-5 text-sky-500" />
+              </div>
+              <div className="flex-1 text-left">
+                <p className="text-sky-500 text-[11px] font-bold">Email</p>
+                <p className="text-gray-600 text-[11px] font-semibold mt-0.5">thanadolpetch22@gmail.com</p>
+              </div>
+              <div className="w-7 h-7 rounded-full bg-sky-500 text-white flex items-center justify-center shrink-0 shadow-lg shadow-sky-500/30 cursor-pointer">
+                <Edit3 className="w-3.5 h-3.5" />
+              </div>
+            </div>
+
+            {/* Phone Card */}
+            <div className="bg-white w-full max-w-sm rounded-[1.5rem] p-4 flex items-center gap-4 shadow-[0_15px_40px_-15px_rgba(0,0,0,0.1)] border border-gray-50 transform md:translate-x-4 hover:-translate-y-1 transition duration-300">
+              <div className="bg-sky-50 w-12 h-12 rounded-xl flex items-center justify-center shrink-0">
+                <Phone className="w-5 h-5 text-sky-500" />
+              </div>
+              <div className="flex-1 text-left">
+                <p className="text-sky-500 text-[11px] font-bold">Phone</p>
+                <p className="text-gray-600 text-[11px] font-semibold mt-0.5">+ 66 61 912 6201</p>
+              </div>
+              <div className="w-7 h-7 rounded-full bg-sky-500 text-white flex items-center justify-center shrink-0 shadow-lg shadow-sky-500/30 cursor-pointer">
+                <Phone className="w-3.5 h-3.5" />
+              </div>
+            </div>
+
+            {/* Address Card */}
+            <div className="bg-white w-full max-w-sm rounded-[1.5rem] p-4 flex items-center gap-4 shadow-[0_15px_40px_-15px_rgba(0,0,0,0.1)] border border-gray-50 transform md:-translate-x-8 hover:-translate-y-1 transition duration-300">
+              <div className="bg-sky-50 w-12 h-12 rounded-xl flex items-center justify-center shrink-0">
+                <MapPin className="w-5 h-5 text-sky-500" />
+              </div>
+              <div className="flex-1 text-left">
+                <p className="text-sky-500 text-[11px] font-bold">Address</p>
+                <p className="text-gray-600 text-[10px] font-semibold leading-tight mt-0.5">Samut Songkhram, Thailand</p>
+              </div>
+              <div className="w-7 h-7 rounded-full bg-sky-500 text-white flex items-center justify-center shrink-0 shadow-lg shadow-sky-500/30 cursor-pointer">
+                <MapPin className="w-3.5 h-3.5" />
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
     </div>
   );
 }
