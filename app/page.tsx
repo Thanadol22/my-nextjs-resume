@@ -285,18 +285,18 @@ export default function Portfolio() {
                   <li>Developed a Full-stack Spa System (PHP/MySQL) integrating booking, inventory, and POS.</li>
                   <li>Automated Email Notifications to streamline booking confirmations and user communication.</li>
                 </ul>
-                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mt-auto pt-6 gap-4">
+                <div className="flex flex-col xl:flex-row items-start xl:items-center justify-between mt-auto pt-6 gap-5">
                   <div className="flex flex-wrap gap-2">
                     <span className="bg-gray-50 text-gray-500 px-3.5 py-1.5 rounded-lg text-[11px] font-bold border border-gray-100">PHP</span>
                     <span className="bg-gray-50 text-gray-500 px-3.5 py-1.5 rounded-lg text-[11px] font-bold border border-gray-100">MySQL</span>
                     <span className="bg-gray-50 text-gray-500 px-3.5 py-1.5 rounded-lg text-[11px] font-bold border border-gray-100">JavaScript</span>
                     <span className="bg-gray-50 text-gray-500 px-3.5 py-1.5 rounded-lg text-[11px] font-bold border border-gray-100">CSS</span>
                   </div>
-                  <div className="flex gap-2 w-full sm:w-auto shrink-0 justify-end">
-                    <a href="https://github.com/Thanadol22/BkkSpa" target="_blank" rel="noopener noreferrer" className="bg-gray-900 text-white p-2 rounded-full hover:bg-gray-800 transition flex items-center justify-center shrink-0" title="View Source on GitHub">
+                  <div className="flex gap-3 w-full xl:w-auto shrink-0 justify-start">
+                    <a href="https://github.com/Thanadol22/BkkSpa" target="_blank" rel="noopener noreferrer" className="w-9 h-9 bg-gray-900 text-white rounded-full hover:bg-gray-800 transition flex items-center justify-center shrink-0" title="View Source on GitHub">
                       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd" /></svg>
                     </a>
-                    <Link href="/project/bsa" className="bg-sky-500 text-white px-4 py-1.5 rounded-full text-xs font-semibold shadow-md shadow-sky-500/20 hover:bg-sky-600 transition shrink-0 whitespace-nowrap flex items-center justify-center">
+                    <Link href="/project/bsa" className="h-9 px-5 bg-sky-500 text-white rounded-full text-[13px] font-bold shadow-md shadow-sky-500/20 hover:bg-sky-600 transition flex-1 sm:flex-none whitespace-nowrap flex items-center justify-center">
                       View Project &rarr;
                     </Link>
                   </div>
@@ -316,17 +316,17 @@ export default function Portfolio() {
                   <li>Developed a Multi-platform Tracking System (Web & Mobile) for university shuttles, featuring dedicated interfaces for admins, students, and drivers.</li>
                   <li>Integrated ESP32 and GT-U7 GPS Modules to stream real-time vehicle locations and live updates via Firebase.</li>
                 </ul>
-                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mt-auto pt-6 gap-4">
+                <div className="flex flex-col xl:flex-row items-start xl:items-center justify-between mt-auto pt-6 gap-5">
                   <div className="flex flex-wrap gap-2">
                     <span className="bg-gray-50 text-gray-500 px-3.5 py-1.5 rounded-lg text-[11px] font-bold border border-gray-100">PHP</span>
                     <span className="bg-gray-50 text-gray-500 px-3.5 py-1.5 rounded-lg text-[11px] font-bold border border-gray-100">Firebase</span>
                     <span className="bg-gray-50 text-gray-500 px-3.5 py-1.5 rounded-lg text-[11px] font-bold border border-gray-100">Tailwind CSS</span>
                   </div>
-                  <div className="flex gap-2 w-full sm:w-auto shrink-0 justify-end">
-                    <a href="https://github.com/Thanadol22/WEB_KMUTNB_BUS" target="_blank" rel="noopener noreferrer" className="bg-gray-900 text-white p-2 rounded-full hover:bg-gray-800 transition flex items-center justify-center shrink-0" title="View Source on GitHub">
+                  <div className="flex gap-3 w-full xl:w-auto shrink-0 justify-start">
+                    <a href="https://github.com/Thanadol22/WEB_KMUTNB_BUS" target="_blank" rel="noopener noreferrer" className="w-9 h-9 bg-gray-900 text-white rounded-full hover:bg-gray-800 transition flex items-center justify-center shrink-0" title="View Source on GitHub">
                       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd" /></svg>
                     </a>
-                    <Link href="/project/web_kmutnb" className="bg-sky-500 text-white px-4 py-1.5 rounded-full text-xs font-semibold shadow-md shadow-sky-500/20 hover:bg-sky-600 transition shrink-0 whitespace-nowrap flex items-center justify-center">
+                    <Link href="/project/web_kmutnb" className="h-9 px-5 bg-sky-500 text-white rounded-full text-[13px] font-bold shadow-md shadow-sky-500/20 hover:bg-sky-600 transition flex-1 sm:flex-none whitespace-nowrap flex items-center justify-center">
                       View Project &rarr;
                     </Link>
                   </div>
@@ -346,16 +346,16 @@ export default function Portfolio() {
                   <li>Developed a Multi-platform Tracking System (Web & Mobile) for university shuttles, featuring dedicated interfaces for admins, students, and drivers.</li>
                   <li>Integrated ESP32 and GT-U7 GPS Modules to stream real-time vehicle locations and live updates via Firebase.</li>
                 </ul>
-                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mt-auto pt-6 gap-4">
+                <div className="flex flex-col xl:flex-row items-start xl:items-center justify-between mt-auto pt-6 gap-5">
                   <div className="flex flex-wrap gap-2">
                     <span className="bg-gray-50 text-gray-500 px-3.5 py-1.5 rounded-lg text-[11px] font-bold border border-gray-100">Flutter (Dart)</span>
                     <span className="bg-gray-50 text-gray-500 px-3.5 py-1.5 rounded-lg text-[11px] font-bold border border-gray-100">Firebase</span>
                   </div>
-                  <div className="flex gap-2 w-full sm:w-auto shrink-0 justify-end">
-                    <a href="https://github.com/Thanadol22/KMUTNB_BUS" target="_blank" rel="noopener noreferrer" className="bg-gray-900 text-white p-2 rounded-full hover:bg-gray-800 transition flex items-center justify-center shrink-0" title="View Source on GitHub">
+                  <div className="flex gap-3 w-full xl:w-auto shrink-0 justify-start">
+                    <a href="https://github.com/Thanadol22/KMUTNB_BUS" target="_blank" rel="noopener noreferrer" className="w-9 h-9 bg-gray-900 text-white rounded-full hover:bg-gray-800 transition flex items-center justify-center shrink-0" title="View Source on GitHub">
                       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd" /></svg>
                     </a>
-                    <Link href="/project/kmutnb_bus" className="bg-sky-500 text-white px-4 py-1.5 rounded-full text-xs font-semibold shadow-md shadow-sky-500/20 hover:bg-sky-600 transition shrink-0 whitespace-nowrap flex items-center justify-center">
+                    <Link href="/project/kmutnb_bus" className="h-9 px-5 bg-sky-500 text-white rounded-full text-[13px] font-bold shadow-md shadow-sky-500/20 hover:bg-sky-600 transition flex-1 sm:flex-none whitespace-nowrap flex items-center justify-center">
                       View Project &rarr;
                     </Link>
                   </div>
@@ -376,16 +376,16 @@ export default function Portfolio() {
                   </li>
                   <li>Integrated an automated approval system to track borrowing history and streamline faculty authorizations.</li>
                 </ul>
-                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mt-auto pt-6 gap-4">
+                <div className="flex flex-col xl:flex-row items-start xl:items-center justify-between mt-auto pt-6 gap-5">
                   <div className="flex flex-wrap gap-2">
                     <span className="bg-gray-50 text-gray-500 px-3.5 py-1.5 rounded-lg text-[11px] font-bold border border-gray-100">Flutter (Dart)</span>
                     <span className="bg-gray-50 text-gray-500 px-3.5 py-1.5 rounded-lg text-[11px] font-bold border border-gray-100">Firebase</span>
                   </div>
-                  <div className="flex gap-2 w-full sm:w-auto shrink-0 justify-end">
-                    <a href="https://github.com/Thanadol22/Ec_Students" target="_blank" rel="noopener noreferrer" className="bg-gray-900 text-white p-2 rounded-full hover:bg-gray-800 transition flex items-center justify-center shrink-0" title="View Source on GitHub">
+                  <div className="flex gap-3 w-full xl:w-auto shrink-0 justify-start">
+                    <a href="https://github.com/Thanadol22/Ec_Students" target="_blank" rel="noopener noreferrer" className="w-9 h-9 bg-gray-900 text-white rounded-full hover:bg-gray-800 transition flex items-center justify-center shrink-0" title="View Source on GitHub">
                       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd" /></svg>
                     </a>
-                    <Link href="/project/ec_student" className="bg-sky-500 text-white px-4 py-1.5 rounded-full text-xs font-semibold shadow-md shadow-sky-500/20 hover:bg-sky-600 transition shrink-0 whitespace-nowrap flex items-center justify-center">
+                    <Link href="/project/ec_student" className="h-9 px-5 bg-sky-500 text-white rounded-full text-[13px] font-bold shadow-md shadow-sky-500/20 hover:bg-sky-600 transition flex-1 sm:flex-none whitespace-nowrap flex items-center justify-center">
                       View Project &rarr;
                     </Link>
                   </div>
