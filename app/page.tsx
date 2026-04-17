@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { useState, useEffect } from "react";
 import { Code2, MonitorPlay, Smartphone, Briefcase, Award, GraduationCap, Mail, Phone, MapPin, Instagram, Linkedin, Github, Coffee, MessageCircle, Edit3, Facebook, LineChart } from "lucide-react";
 import banner1 from "../assets/banner/1.png";
 import banner2 from "../assets/banner/2.png";
@@ -6,6 +9,38 @@ import banner3 from "../assets/banner/3.png";
 import banner4 from "../assets/banner/4.png";
 
 export default function Portfolio() {
+  const [activeSection, setActiveSection] = useState("intro");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ["intro", "about", "project", "contact"];
+      const scrollPosition = window.scrollY + 150; // offset for sticky header
+
+      // Handle scrolled to bottom case specifically for the contact section
+      if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 50) {
+        setActiveSection("contact");
+        return;
+      }
+
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const offsetTop = element.offsetTop;
+          const height = element.offsetHeight;
+
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + height) {
+            setActiveSection(section);
+          }
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Initial check
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <div className="min-h-screen bg-white font-sans pb-20">
       {/* Navigation */}
@@ -15,10 +50,10 @@ export default function Portfolio() {
 
         </div>
         <div className="hidden md:flex gap-8 text-sm font-medium text-gray-500">
-          <a href="#intro" className="text-sky-500 border-b-2 border-sky-500 pb-1">Intro</a>
-          <a href="#about" className="hover:text-sky-500 transition">About</a>
-          <a href="#project" className="hover:text-sky-500 transition">Project</a>
-          <a href="#contact" className="hover:text-sky-500 transition">Contact</a>
+          <a href="#intro" className={`transition border-b-2 pb-1 ${activeSection === "intro" ? "text-sky-500 border-sky-500" : "border-transparent hover:text-sky-500"}`}>Intro</a>
+          <a href="#about" className={`transition border-b-2 pb-1 ${activeSection === "about" ? "text-sky-500 border-sky-500" : "border-transparent hover:text-sky-500"}`}>About</a>
+          <a href="#project" className={`transition border-b-2 pb-1 ${activeSection === "project" ? "text-sky-500 border-sky-500" : "border-transparent hover:text-sky-500"}`}>Project</a>
+          <a href="#contact" className={`transition border-b-2 pb-1 ${activeSection === "contact" ? "text-sky-500 border-sky-500" : "border-transparent hover:text-sky-500"}`}>Contact</a>
         </div>
         <a href="#contact" className="bg-sky-500 text-white px-6 py-2 border-none rounded-full text-sm font-semibold hover:bg-sky-600 transition inline-flex items-center justify-center cursor-pointer">
           Hire Me

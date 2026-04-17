@@ -8,6 +8,14 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
     const resolvedParams = await params;
     const { id } = resolvedParams;
 
+    const navBar = (
+        <nav className="flex justify-between items-center px-6 md:px-12 lg:px-24 py-6 bg-white w-full border-b border-gray-50 flex-none group-has-[div.modal-open]:hidden sticky top-0 z-50">
+            <Link href="/" className="text-gray-500 hover:text-sky-500 transition font-medium flex items-center gap-2 text-sm">
+                <span>&larr;</span> Back to Portfolio
+            </Link>
+        </nav>
+    );
+
     const bsaContent = (
         <div className="space-y-6 mt-10">
             <p className="text-gray-600 leading-relaxed text-[15px]">
@@ -241,9 +249,9 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
     }
 
     return (
-        <div className="min-h-screen bg-gray-50 pb-20 font-sans">
-            {/* Navigation */}
-            <nav className="flex items-center px-6 md:px-12 lg:px-24 py-6 bg-white w-full border-b border-gray-100 sticky top-0 z-50 shadow-sm">
+        <div className="group min-h-screen bg-gray-50 pb-20 font-sans has-[[data-modal-open]]:overflow-hidden">
+            {/* Navigation - Uses group-has to hide when modal is open */}
+            <nav className="flex items-center px-6 md:px-12 lg:px-24 py-6 bg-white w-full border-b border-gray-100 sticky top-0 z-[40] shadow-sm transform transition-all duration-300 group-has-[[data-modal-open]]:-translate-y-full group-has-[[data-modal-open]]:h-0 group-has-[[data-modal-open]]:opacity-0 group-has-[[data-modal-open]]:p-0 group-has-[[data-modal-open]]:border-0 overflow-hidden">
                 <Link href="/#project" className="text-gray-500 hover:text-sky-500 font-semibold flex items-center gap-2 transition">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
