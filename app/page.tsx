@@ -430,7 +430,7 @@ export default function Portfolio() {
             </div>
 
             {/* Email Card */}
-            <div className="bg-white w-full max-w-sm rounded-[1.5rem] p-4 flex items-center gap-4 shadow-[0_15px_40px_-15px_rgba(0,0,0,0.1)] border border-gray-50 transform md:-translate-x-12 hover:-translate-y-1 transition duration-300">
+            <a href="mailto:thanadolpetch22@gmail.com" className="bg-white w-full max-w-sm rounded-[1.5rem] p-4 flex items-center gap-4 shadow-[0_15px_40px_-15px_rgba(0,0,0,0.1)] border border-gray-50 transform md:-translate-x-12 hover:-translate-y-1 transition duration-300">
               <div className="bg-sky-50 w-12 h-12 rounded-xl flex items-center justify-center shrink-0">
                 <Mail className="w-5 h-5 text-sky-500" />
               </div>
@@ -441,10 +441,10 @@ export default function Portfolio() {
               <div className="w-7 h-7 rounded-full bg-sky-500 text-white flex items-center justify-center shrink-0 shadow-lg shadow-sky-500/30 cursor-pointer">
                 <Edit3 className="w-3.5 h-3.5" />
               </div>
-            </div>
+            </a>
 
             {/* Phone Card */}
-            <div className="bg-white w-full max-w-sm rounded-[1.5rem] p-4 flex items-center gap-4 shadow-[0_15px_40px_-15px_rgba(0,0,0,0.1)] border border-gray-50 transform md:translate-x-4 hover:-translate-y-1 transition duration-300">
+            <a href="tel:+66619126201" className="bg-white w-full max-w-sm rounded-[1.5rem] p-4 flex items-center gap-4 shadow-[0_15px_40px_-15px_rgba(0,0,0,0.1)] border border-gray-50 transform md:translate-x-4 hover:-translate-y-1 transition duration-300">
               <div className="bg-sky-50 w-12 h-12 rounded-xl flex items-center justify-center shrink-0">
                 <Phone className="w-5 h-5 text-sky-500" />
               </div>
@@ -455,10 +455,10 @@ export default function Portfolio() {
               <div className="w-7 h-7 rounded-full bg-sky-500 text-white flex items-center justify-center shrink-0 shadow-lg shadow-sky-500/30 cursor-pointer">
                 <Phone className="w-3.5 h-3.5" />
               </div>
-            </div>
+            </a>
 
             {/* Address Card */}
-            <div className="bg-white w-full max-w-sm rounded-[1.5rem] p-4 flex items-center gap-4 shadow-[0_15px_40px_-15px_rgba(0,0,0,0.1)] border border-gray-50 transform md:-translate-x-8 hover:-translate-y-1 transition duration-300">
+            <a href="https://maps.google.com/?q=Samut+Songkhram,+Thailand" target="_blank" rel="noopener noreferrer" className="bg-white w-full max-w-sm rounded-[1.5rem] p-4 flex items-center gap-4 shadow-[0_15px_40px_-15px_rgba(0,0,0,0.1)] border border-gray-50 transform md:-translate-x-8 hover:-translate-y-1 transition duration-300">
               <div className="bg-sky-50 w-12 h-12 rounded-xl flex items-center justify-center shrink-0">
                 <MapPin className="w-5 h-5 text-sky-500" />
               </div>
@@ -469,7 +469,7 @@ export default function Portfolio() {
               <div className="w-7 h-7 rounded-full bg-sky-500 text-white flex items-center justify-center shrink-0 shadow-lg shadow-sky-500/30 cursor-pointer">
                 <MapPin className="w-3.5 h-3.5" />
               </div>
-            </div>
+            </a>
 
           </div>
         </div>
